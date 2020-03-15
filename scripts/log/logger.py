@@ -38,7 +38,7 @@ class logger(object):
         # 修改 log 保存位置
         log_file = "{0}/{1}.log".format(logs_dir, filename)
         fmt = logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
-        # 日志每日轮换， 保存近三个月的日志
+        # 日志每日轮换， 保存近30天的日志
         time_handler = TimedRotatingFileHandler(filename=log_file, when='D', interval=1, backupCount=30)
         time_handler.setFormatter(fmt)
 

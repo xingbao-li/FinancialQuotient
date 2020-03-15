@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
+import tushare as ts
+
 
 def main():
-    print("My tests ...")
+    print(ts.__version__)
 
 
 if __name__ == '__main__':

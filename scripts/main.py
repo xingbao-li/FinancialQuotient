@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from log.logger import logger
+from init import log
+from tsdao.ts_stock_basic import ts_stock_basic
 
 
 def main():
-    print("Hello World!")
+    log.info("Hello World!")
 
-    log = logger()
+    tsdb = ts_stock_basic()
 
-    log.info("info .. ")
-    log.debug("debug .. ")
-    log.warning("warning .. ")
-    log.error("error .. ")
+    tsdb.query()
+    tsdb.to_sql()
+
+
 
 if __name__ == '__main__':
     main()
