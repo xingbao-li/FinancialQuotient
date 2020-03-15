@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from init import log, tsconn, tspro
-import tushare as ts
-
-
 
 # 操作 基类
 class ts_base():
@@ -14,7 +11,7 @@ class ts_base():
         #  操作  数据类
         self.df = None
         #  初始化 api
-        self.pro = ts.pro_api()
+        self.pro = tspro
 
 
         #  获取 数据 字段  字段用逗号连接  如: 'ts_code,symbol,name'
@@ -27,6 +24,7 @@ class ts_base():
     #  请求数据
     def query(self):
         self.df = self.pro.query(self.api_name, fields=self.fields, **self.input_arr)
+        print(self.df)
 
     # 子类继承 当前接口
     #  设置  请求参数
