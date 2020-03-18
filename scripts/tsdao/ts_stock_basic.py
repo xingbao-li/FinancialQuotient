@@ -3,7 +3,8 @@
 from tsdao.ts_base import ts_base
 
 
-# 获取基础信息数据，包括股票代码、名称、上市日期、退市日期等
+# 股票列表
+# 描述：获取基础信息数据，包括股票代码、名称、上市日期、退市日期等
 class ts_stock_basic(ts_base):
     def __init__(self):
         super().__init__(self)

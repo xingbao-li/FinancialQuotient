@@ -1,16 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from init import log
-from tsdao.ts_stock_basic import ts_stock_basic
-
+from init import log, auto
 
 def main():
-    log.info("Hello World!")
+    log.info("========= 开始 执行任务 =========")
 
-    tsdb = ts_stock_basic()
+    # 执行任务
+    auto.run()
 
-    tsdb.query()
-    tsdb.to_sql()
+    log.info("========= 结束 执行任务 =========")
 
 
 

@@ -26,6 +26,9 @@ class TSDBObject(object):
 
         self.db = db
 
-    def to_sql(self, data, table):
-        data.to_sql(table, self.db)
+    '''
+    if_exists: {'fail', 'replace', 'append'}, default 'fail'
+    '''
+    def to_sql(self, data, table, if_exists="fail"):
+        data.to_sql(table, self.db, if_exists=if_exists)
 
